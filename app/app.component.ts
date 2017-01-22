@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
-interface ITodo{
+class Todo{
     title: string;
     completed: boolean;
 }
 
-const todos: ITodo[] = [
+const todos: Todo[] = [
     {
         title: 'Изучить JavaScript',
         completed: true
@@ -29,12 +29,12 @@ const todos: ITodo[] = [
 })
 export class AppComponent {
     title = 'Angular 2Do';
-    todos:ITodo[] = todos;
+    todos:Todo[] = todos;
 
-    toggle(todo: ITodo){
+    toggle(todo: Todo){
         todo.completed = !todo.completed;
     }
-    delete(todo: ITodo){
+    delete(todo: Todo){
         let index = this.todos.indexOf(todo);
 
         if (index > -1){
