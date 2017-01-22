@@ -5,7 +5,7 @@ interface ITodo{
     completed: boolean;
 }
 
-const todos = [
+const todos: ITodo[] = [
     {
         title: 'Изучить JavaScript',
         completed: true
@@ -29,7 +29,7 @@ const todos = [
 })
 export class AppComponent {
     title = 'Angular 2Do';
-    todos = todos;
+    todos:ITodo[] = todos;
 
     toggle(todo: ITodo){
         todo.completed = !todo.completed;
