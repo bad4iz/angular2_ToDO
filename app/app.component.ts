@@ -1,5 +1,20 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
+const todos = [
+    {
+        title: 'Изучить JavaScript',
+        completed: true
+    },
+     {
+        title: 'Изучить Angular 2',
+        completed: false
+    },
+     {
+        title:  'Написать приложение',
+        completed: true
+    }
+   
+];
 
 @Component({
     moduleId: module.id,
@@ -7,7 +22,8 @@ import {Component} from '@angular/core';
     templateUrl: './app.component.html',
     styleUrls: ['app.component.css']
 })
-export class AppComponent{
-    title = 'Angular 2Do'
+export class AppComponent {
+    title = 'Angular 2Do';
+    todos = todos;
 
 }
