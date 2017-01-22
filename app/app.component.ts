@@ -46,8 +46,10 @@ export class AppComponent {
             this.todos.splice(index, 1);
         }
     }
-    create(title: string){
+    create(event: Event, title: string){
+        event.preventDefault();
         let todo: Todo = new Todo(title);
+        this.todos.push(todo);
     }
 
 }

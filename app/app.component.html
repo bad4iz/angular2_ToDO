@@ -4,7 +4,7 @@
 </header>
 
 <main>
-    <form action="" class="todo-form" (submit)="create(titleInput.value)">
+    <form action="" class="todo-form" (submit)="create($event, titleInput.value)">
         <input type="text" placeholder="Что нужно сделать?" #titleInput name="" value="">
         <button type="submit"Добавить></button>
     </form>
