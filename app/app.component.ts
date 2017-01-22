@@ -3,6 +3,11 @@ import { Component } from '@angular/core';
 class Todo{
     title: string;
     completed: boolean;
+
+    constructor(title: string, completed: boolean = false){
+        this.title = title;
+        this.completed = completed;
+    }
 }
 
 const todos: Todo[] = [
@@ -40,6 +45,9 @@ export class AppComponent {
         if (index > -1){
             this.todos.splice(index, 1);
         }
+    }
+    create(title: string){
+        let todo: Todo = new Todo(title);
     }
 
 }
