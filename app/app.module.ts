@@ -1,5 +1,6 @@
-import {NgModule} from "@angular/core";
+import { NgModule } from "@angular/core";
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 /**
  * Created by bad4iz on 21.01.2017.
  */
@@ -7,7 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 
 @NgModule({
-    imports: [BrowserModule],
+    imports: [BrowserModule, FormsModule], 
     declarations: [AppComponent],
     bootstrap: [AppComponent]
 

@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 
 class Todo{
-    title: string;
-    completed: boolean;
-
-    constructor(title: string, completed: boolean = false){
-        this.title = title;
-        this.completed = completed;
+    constructor(public title: string, public completed: boolean = false){
     }
 }
 
@@ -35,6 +30,7 @@ const todos: Todo[] = [
 export class AppComponent {
     title = 'Angular 2Do';
     todos:Todo[] = todos;
+    newTodoTitle: string = '';
 
     toggle(todo: Todo){
         todo.completed = !todo.completed;
@@ -46,10 +42,11 @@ export class AppComponent {
             this.todos.splice(index, 1);
         }
     }
-    create(event: Event, title: string){
-        event.preventDefault();
-        let todo: Todo = new Todo(title);
+    create(){
+        let todo: Todo = new Todo(this.newTodoTitle);
+
         this.todos.push(todo);
+        this.newTodoTitle = '';
     }
 
 }

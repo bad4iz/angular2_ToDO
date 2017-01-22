@@ -4,9 +4,9 @@
 </header>
 
 <main>
-    <form action="" class="todo-form" (submit)="create($event, titleInput.value)">
-        <input type="text" placeholder="Что нужно сделать?" #titleInput name="" value="">
-        <button type="submit"Добавить></button>
+    <form action="" class="todo-form" (ngSubmit)="create(); todoForm.reset()" #todoForm="ngForm">
+        <input type="text" [(ngModel)]="newTodoTitle" placeholder="Что нужно сделать?" required name="title" >
+        <button type="submit" [disabled]="todoForm.form.invalid">Добавить</button>
     </form>
     <section class="todo-list" *ngIf="todos.length">
         <div class="todo-item" *ngFor="let todo of todos" [class.completed]="todo.completed">
