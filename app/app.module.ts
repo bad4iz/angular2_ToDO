@@ -13,7 +13,8 @@ import {TodoListComponent} from './todo-list/todo-list.component';
     imports: [BrowserModule, FormsModule], 
     declarations: [
         AppComponent,
-        TodoFormComponent
+        TodoFormComponent,
+        TodoListComponent
         ],
     bootstrap: [AppComponent]
 
