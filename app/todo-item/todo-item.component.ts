@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 
+import {Todo} from '../shared/todo';
+
 @Component({
     moduleId: module.id,
     selector: 'todo-item',
@@ -7,5 +9,5 @@ import {Component} from '@angular/core';
     styleUrls: ['todo-item.component.css']
 })
 export class TodoItemComponent{
-    
+    todo: Todo = new Todo("djljljljl");
 }
