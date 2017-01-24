@@ -4,10 +4,7 @@
 </header>
 
 <main>
-    <form action="" class="todo-form" (ngSubmit)="create(); todoForm.reset()" #todoForm="ngForm">
-        <input type="text" [(ngModel)]="newTodoTitle" placeholder="Что нужно сделать?" required name="title" >
-        <button type="submit" [disabled]="todoForm.form.invalid">Добавить</button>
-    </form>
+    <todo-form></todo-form>
     <section class="todo-list" *ngIf="todos.length">
         <div class="todo-item" *ngFor="let todo of todos" [class.completed]="todo.completed">
             <button class="checkbox icon" (click)="toggle(todo)">
