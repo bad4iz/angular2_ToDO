@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     moduleId: module.id,
     selector: 'todo-form',
     templateUrl: 'todo-form.component.html',
-    styleUrl: ['todo-form.component.css']
+    styleUrls: ['todo-form.component.css']
 })
 export class TodoFormComponent {
     newTodoTitle: string = '';
