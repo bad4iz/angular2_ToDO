@@ -12,8 +12,8 @@ import {TodoService } from '../shared/todo.service'
 export class TodoListComponent{
     @Input() todos: Todo[];
 
-    constructor(){
-        this.todoService = new TodoService();
+    constructor(private todoService: TodoService){
+        this.todos = [];
     }
 
      toggle(todo: Todo){
