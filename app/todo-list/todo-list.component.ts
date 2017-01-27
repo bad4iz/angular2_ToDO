@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 import {Todo } from '../shared/todo';
-
+import {TodoService } from '../shared/todo.service'
 
 @Component({
     moduleId: module.id,
@@ -11,6 +11,10 @@ import {Todo } from '../shared/todo';
 })
 export class TodoListComponent{
     @Input() todos: Todo[];
+
+    constructor(){
+        this.todoService = new TodoService();
+    }
 
      toggle(todo: Todo){
         todo.completed = !todo.completed;
