@@ -10,4 +10,13 @@ export class TodoService {
     getTodos(): Todo[] {
         return this.todos;
     }
+    createTodo(title: string){
+
+    }
+    delete(todo: Todo){
+
+    }
+    toggle(todo: Todo){
+
+    }
 }

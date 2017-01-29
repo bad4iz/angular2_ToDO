@@ -23,12 +23,6 @@ export class TodoListComponent implements OnInit{
         todo.completed = !todo.completed;
     }
     delete(todo: Todo){
-        let index = this.todos.indexOf(todo);
 
-        console.log('ljljljlkj');
-
-        if (index > -1){
-            this.todos.splice(index, 1);
-        }
     }
 }
