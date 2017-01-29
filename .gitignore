@@ -44,4 +44,4 @@ app/**/*.js
 app/**/*.js.map
 
 
-.idea/
+.idea

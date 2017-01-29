@@ -13,9 +13,5 @@ export class AppComponent {
     title = 'Angular 2Do';
 
 
-    create(title: string){
-        const todo = new Todo(title);
-        this.todos.push(todo);
-    }
 
 }
