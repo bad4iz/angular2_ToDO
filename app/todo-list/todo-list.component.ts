@@ -20,9 +20,9 @@ export class TodoListComponent implements OnInit{
         this.todos = this.todoService.getTodos();
     }
      toggle(todo: Todo){
-        todo.completed = !todo.completed;
+        this.todoService.toggle(todo);
     }
     delete(todo: Todo){
-
+        this.todoService.deleteTodo(todo)
     }
 }
