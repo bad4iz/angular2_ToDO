@@ -13,7 +13,7 @@ export class TodoService {
     createTodo(title: string){
 
     }
-    delete(todo: Todo){
+    deleteTodo(todo: Todo){
         let index = this.todos.indexOf(todo);
 
         if (index > -1){
