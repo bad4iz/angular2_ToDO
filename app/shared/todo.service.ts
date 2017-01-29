@@ -21,7 +21,7 @@ export class TodoService {
             this.todos.splice(index, 1);
         }
     }
-    toggle(todo: Todo){
+    toggleTodo(todo: Todo){
         todo.completed = !todo.completed;
     }
 }

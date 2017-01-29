@@ -20,7 +20,7 @@ export class TodoListComponent implements OnInit{
         this.todos = this.todoService.getTodos();
     }
      toggle(todo: Todo){
-        this.todoService.toggle(todo);
+        this.todoService.toggleTodo(todo);
     }
     delete(todo: Todo){
         this.todoService.deleteTodo(todo)
