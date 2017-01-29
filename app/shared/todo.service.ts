@@ -14,9 +14,13 @@ export class TodoService {
 
     }
     delete(todo: Todo){
+        let index = this.todos.indexOf(todo);
 
+        if (index > -1){
+            this.todos.splice(index, 1);
+        }
     }
     toggle(todo: Todo){
-
+        todo.completed = !todo.completed;
     }
 }
