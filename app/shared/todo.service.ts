@@ -11,7 +11,8 @@ export class TodoService {
         return this.todos;
     }
     createTodo(title: string){
-
+        let todo = new Todo(title);
+        this.todos.push(todo);
     }
     deleteTodo(todo: Todo){
         let index = this.todos.indexOf(todo);
