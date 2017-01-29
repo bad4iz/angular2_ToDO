@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import {Todo } from '../shared/todo';
 import {TodoService } from '../shared/todo.service'
@@ -9,13 +9,16 @@ import {TodoService } from '../shared/todo.service'
     templateUrl: 'todo-list.component.html',
     styleUrls: ['todo-list.component.css']
 })
-export class TodoListComponent{
-    @Input() todos: Todo[];
+export class TodoListComponent implements OnInit{
+    todos: Todo[];
 
     constructor(private todoService: TodoService){
         this.todos = [];
     }
 
+    ngOnInit(){
+        this.todos = this.todoService.getTodos();
+    }
      toggle(todo: Todo){
         todo.completed = !todo.completed;
     }
