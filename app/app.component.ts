@@ -11,7 +11,7 @@ import {todos} from './shared/data';
 })
 export class AppComponent {
     title = 'Angular 2Do';
-    todos: Todo[] = todos;
+
 
     create(title: string){
         const todo = new Todo(title);
